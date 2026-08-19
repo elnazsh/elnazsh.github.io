@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elnaz Shafaei</title>
-<meta name="description" content="Personal homepage of Elnaz Shafaei.">
+<meta name="description" content="Elnaz Shafaei, machine learning researcher working on speech and language AI: real-time ASR, speech translation, and multimodal sequence models.">
 <style>
   :root {
     --bg: #fbfbfa;
@@ -48,6 +48,13 @@
 
   .tagline {
     color: var(--muted);
+    margin: 0 0 0.35rem;
+  }
+
+  .location {
+    color: var(--muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.85rem;
     margin: 0 0 2.5rem;
   }
 
@@ -68,21 +75,44 @@
   a { color: var(--link); text-underline-offset: 2px; }
   a:hover { text-decoration: none; }
 
-  ul.links {
+  ul.plain {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  ul.links li {
+
+  ul.focus {
+    padding-left: 1.1rem;
+    margin: 0;
+  }
+  ul.focus li { margin-bottom: 0.45rem; }
+
+  ol.pubs {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  ol.pubs li { margin-bottom: 0.9rem; }
+  ol.pubs .venue { color: var(--muted); }
+
+  ul.plain.links li {
     display: flex;
     gap: 0.75rem;
     padding: 0.4rem 0;
   }
-  ul.links span {
-    flex: 0 0 5rem;
+  ul.plain.links > li > span:first-child {
+    flex: 0 0 6rem;
     color: var(--muted);
     font-family: ui-sans-serif, system-ui, sans-serif;
     font-size: 0.85rem;
+  }
+
+  ul.plain.software li { padding: 0.35rem 0; font-size: 0.95rem; }
+  ul.plain.software .role { color: var(--muted); font-size: 0.9em; }
+
+  .note {
+    color: var(--muted);
+    font-size: 0.9rem;
   }
 
   footer {
@@ -99,19 +129,128 @@
 <main>
 
   <h1>Elnaz Shafaei</h1>
-  <p class="tagline">Replace this line with a short description of what you do.</p>
+  <p class="tagline">Machine Learning Researcher | Speech and Language AI</p>
+  <p class="location">Tübingen, Germany</p>
 
   <h2>About</h2>
   <p>
-    A paragraph or two about yourself goes here &mdash; what you work on, what
-    you're interested in, what you're currently building. Edit this file
-    (<code>index.html</code>) and push to update the site.
+    I am a research scientist working on speech and language AI, with around
+    eight years of research experience and a focus on systems that have to run
+    in production, in real time, for real users.
+  </p>
+  <p>
+    At DeepL I worked on <a href="https://www.deepl.com/en/products/voice">DeepL
+    Voice</a>, a real-time speech-to-speech translation system for business
+    communication supporting 18 input languages and more than 30 target
+    languages. I trained and deployed the streaming transcription models behind
+    it, built the audio and text data pipelines that feed model training, and
+    designed the large-scale evaluation frameworks used to judge transcription
+    and translation quality. I led the evaluation of Spoken Terms, a
+    customization feature that correctly spells the terminology, acronyms, and
+    product names a given customer uses, which gated its release.
+  </p>
+  <p>
+    Before that I completed a PhD in quantitative linguistics at the University
+    of Tübingen (summa cum laude), in Harald Baayen's group as part of the
+    ERC-funded WIDE project. My thesis, <em>Wide Incremental Learning with
+    Discrimination Networks for Auditory Comprehension</em>, built computational
+    models of how people understand spoken words directly from raw audio,
+    grounded in error-driven learning. I hold an MSc in Computational
+    Linguistics from the University of Stuttgart.
+  </p>
+  <p>
+    The through-line across both halves of my career is the same: take a
+    sequence model from an idea, through rigorous evaluation, to something
+    people actually use.
   </p>
 
+  <h2>Focus</h2>
+  <ul class="focus">
+    <li>Real-time and streaming ASR, and speech-to-speech translation</li>
+    <li>Streaming inference design: chunking, buffering, context management,
+      quality–latency trade-offs</li>
+    <li>Post-training optimization: knowledge distillation and quantization to
+      cut latency and memory in production</li>
+    <li>Multi-node distributed and mixed-precision training on NVIDIA DGX
+      H100 and GB200, using Transformer Engine</li>
+    <li>Pre-training and fine-tuning multimodal, multilingual sequence models:
+      Transformers, LLMs, and Mixture-of-Experts</li>
+    <li>Large-scale evaluation: automatic metrics, human evaluation, and
+      LLM-as-a-judge</li>
+  </ul>
+
+  <h2>Selected publications</h2>
+  <p class="note">
+    Published as E. Shafaei-Bajestan. Full list on
+    <a href="https://scholar.google.com/citations?user=EZLm4n0AAAAJ">Google
+    Scholar</a>.
+  </p>
+  <ol class="pubs">
+    <li>
+      Ernesti, J., Kaiser, P., Heinze, J., <strong>Shafaei-Bajestan, E.</strong>,
+      Geißler, K., Wang, W., Beck, J., Brinker, S., &amp; Finke, T. (2026).
+      DeepL Voice: Real-time speech-to-speech translation.
+      <span class="venue">Proc. IJCAI–ECAI 2026 (System Demonstrations),
+      Bremen. To appear.</span>
+      <a href="https://youtu.be/DMMcti2f4rc">Demo video</a>
+    </li>
+    <li>
+      <strong>Shafaei-Bajestan, E.</strong>, Moradipour-Tari, M., Uhrig, P., &amp;
+      Baayen, R. H. (2024). The pluralization palette: Unveiling semantic
+      clusters in English nominal pluralization through distributional
+      semantics. <span class="venue">Morphology, 34(4), 369–413.</span>
+      <a href="https://doi.org/10.1007/s11525-024-09428-9">DOI</a>
+    </li>
+    <li>
+      Shahmohammadi, H., Heitmeier, M., <strong>Shafaei-Bajestan, E.</strong>,
+      Lensch, H. P. A., &amp; Baayen, R. H. (2024). Language with vision: A study
+      on grounded word and sentence embeddings.
+      <span class="venue">Behavior Research Methods, 56(6), 5622–5646.</span>
+      <a href="https://doi.org/10.3758/s13428-023-02294-z">DOI</a>
+    </li>
+    <li>
+      Sering, K., Weitz, M., <strong>Shafaei-Bajestan, E.</strong>, &amp; Künstle,
+      D.-E. (2022). pyndl: Naïve Discriminative Learning in Python.
+      <span class="venue">Journal of Open Source Software, 7(80), 4515.</span>
+      <a href="https://doi.org/10.21105/joss.04515">DOI</a>
+    </li>
+    <li>
+      <strong>Shafaei-Bajestan, E.</strong>, Moradipour-Tari, M., Uhrig, P., &amp;
+      Baayen, R. H. (2021). LDL-AURIS: A computational model, grounded in
+      error-driven learning, for the comprehension of single spoken words.
+      <span class="venue">Language, Cognition and Neuroscience.</span>
+      <a href="https://doi.org/10.1080/23273798.2021.1954207">DOI</a>
+    </li>
+    <li>
+      <strong>Shafaei-Bajestan, E.</strong>, &amp; Baayen, R. H. (2018). Wide
+      learning for auditory comprehension.
+      <span class="venue">Proc. INTERSPEECH 2018 (pp. 966–970), Hyderabad.
+      Oral presentation.</span>
+      <a href="https://doi.org/10.21437/Interspeech.2018-2420">DOI</a>
+    </li>
+  </ol>
+
+  <h2>Open-source software</h2>
+  <ul class="plain software">
+    <li><a href="https://osf.io/tdja2/">pyLDL</a>
+      <span class="role">(sole developer): modeling human speech perception
+      with Linear Discriminative Learning.</span></li>
+    <li><a href="https://osf.io/tdja2/">CFBSF</a>
+      <span class="role">(project supervisor): continuous frequency band
+      summary features from audio.</span></li>
+    <li><a href="https://github.com/quantling/pyndl">pyndl</a>
+      <span class="role">(contributor): Naive Discriminative Learning in
+      Python.</span></li>
+    <li>AcousticNDLCodeR and languageR
+      <span class="role">(contributor): R packages, both on CRAN.</span></li>
+  </ul>
+
   <h2>Elsewhere</h2>
-  <ul class="links">
-    <li><span>GitHub</span> <a href="https://github.com/elnazsh">@elnazsh</a></li>
-    <li><span>Email</span> <a href="mailto:elnaz.shafaei@gmail.com">elnaz.shafaei@gmail.com</a></li>
+  <ul class="plain links">
+    <li><span>Email</span> <span><a href="mailto:elnaz.shafaei@gmail.com">elnaz.shafaei@gmail.com</a></span></li>
+    <li><span>LinkedIn</span> <span><a href="https://www.linkedin.com/in/elnaz-shafaei-01611588/">elnaz-shafaei</a></span></li>
+    <li><span>Scholar</span> <span><a href="https://scholar.google.com/citations?user=EZLm4n0AAAAJ">Google Scholar</a></span></li>
+    <li><span>GitHub</span> <span><a href="https://github.com/elnazsh">@elnazsh</a></span></li>
   </ul>
 
   <footer>
