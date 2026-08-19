@@ -55,7 +55,29 @@
     color: var(--muted);
     font-family: ui-sans-serif, system-ui, sans-serif;
     font-size: 0.85rem;
-    margin: 0 0 2.5rem;
+    margin: 0 0 1.6rem;
+  }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    margin: 0 0 2.75rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.85rem;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  nav a:hover, nav a:focus-visible {
+    color: var(--link);
+    text-decoration: underline;
   }
 
   h2 {
@@ -66,6 +88,7 @@
     font-family: ui-sans-serif, system-ui, sans-serif;
     font-weight: 600;
     margin: 2.75rem 0 0.85rem;
+    scroll-margin-top: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--rule);
   }
@@ -132,7 +155,14 @@
   <p class="tagline">Machine Learning Researcher | Speech and Language AI</p>
   <p class="location">Tübingen, Germany</p>
 
-  <h2>About</h2>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#software">Software</a>
+    <a href="#elsewhere">Elsewhere</a>
+  </nav>
+
+  <h2 id="about">About</h2>
   <p>
     I am a research scientist working on speech and language AI, with around
     eight years of research experience and a focus on systems that have to run
@@ -148,7 +178,7 @@
   </p>
   <p>
     Before that I completed a PhD in quantitative linguistics at the University
-    of Tübingen , in Harald Baayen's group as part of the
+    of Tübingen, in Harald Baayen's group as part of the
     ERC-funded WIDE project. My thesis, <em>Wide Incremental Learning with
     Discrimination Networks for Auditory Comprehension</em>, built computational
     models of how people understand spoken words directly from raw audio,
@@ -156,7 +186,7 @@
     Linguistics from the University of Stuttgart.
   </p>
 
-  <h2>Selected publications</h2>
+  <h2 id="publications">Selected publications</h2>
   <p class="note">
     Published as E. Shafaei-Bajestan. Full list on
     <a href="https://scholar.google.com/citations?user=EZLm4n0AAAAJ">Google
@@ -207,7 +237,7 @@
     </li>
   </ol>
 
-  <h2>Open-source software</h2>
+  <h2 id="software">Open-source software</h2>
   <ul class="plain software">
     <li><a href="https://osf.io/tdja2/">pyLDL</a>
       <span class="role">(sole developer): modeling human speech perception
@@ -222,7 +252,7 @@
       <span class="role">(contributor): R packages, both on CRAN.</span></li>
   </ul>
 
-  <h2>Elsewhere</h2>
+  <h2 id="elsewhere">Elsewhere</h2>
   <ul class="plain links">
     <li><span>Email</span> <span><a href="mailto:elnaz.shafaei@gmail.com">elnaz.shafaei@gmail.com</a></span></li>
     <li><span>LinkedIn</span> <span><a href="https://www.linkedin.com/in/elnaz-shafaei-01611588/">elnaz-shafaei</a></span></li>
