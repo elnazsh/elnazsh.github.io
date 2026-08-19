@@ -1,1 +1,123 @@
-Hello World! This is Elnaz :-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elnaz Shafaei</title>
+<meta name="description" content="Personal homepage of Elnaz Shafaei.">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --fg: #1a1a19;
+    --muted: #6b6b66;
+    --rule: #e2e2dd;
+    --link: #2f5fa8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14140f;
+      --fg: #eceae3;
+      --muted: #9c9a92;
+      --rule: #2c2c26;
+      --link: #8fb4ec;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.4rem;
+  }
+
+  .tagline {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+  }
+
+  h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    margin: 2.75rem 0 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 1.1rem; }
+
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:hover { text-decoration: none; }
+
+  ul.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.links li {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+  }
+  ul.links span {
+    flex: 0 0 5rem;
+    color: var(--muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Elnaz Shafaei</h1>
+  <p class="tagline">Replace this line with a short description of what you do.</p>
+
+  <h2>About</h2>
+  <p>
+    A paragraph or two about yourself goes here &mdash; what you work on, what
+    you're interested in, what you're currently building. Edit this file
+    (<code>index.html</code>) and push to update the site.
+  </p>
+
+  <h2>Elsewhere</h2>
+  <ul class="links">
+    <li><span>GitHub</span> <a href="https://github.com/elnazsh">@elnazsh</a></li>
+    <li><span>Email</span> <a href="mailto:elnaz.shafaei@gmail.com">elnaz.shafaei@gmail.com</a></li>
+  </ul>
+
+  <footer>
+    Built with GitHub Pages.
+  </footer>
+
+</main>
+</body>
+</html>
